@@ -11,7 +11,7 @@ export const EmployeeListContainer: React.FunctionComponent = () => {
   const history = useHistory();
 
   const onLoadEmployeeList = async () => {
-    const apiEmployeeList = await getEmployeeList().then(res => res.data);
+    const apiEmployeeList = await getEmployeeList().then(res => res);
     console.log('apiEmployeeList:', apiEmployeeList);
     const viewModelEmployeeList = mapEmployeeListFromApiToVm(apiEmployeeList);
     setEmployees(viewModelEmployeeList);
