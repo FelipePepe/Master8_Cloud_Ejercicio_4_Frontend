@@ -11,7 +11,7 @@ export const getEmployeeList = async (): Promise<Employee[]> => {
     headers: {
       'Access-Control-Allow-Origin': '*',
     }
-  }).get(res => res.data);
+  }).then(res => res.data);
 };
 
 export const deleteEmployee = async (id: string): Promise<boolean> => {
